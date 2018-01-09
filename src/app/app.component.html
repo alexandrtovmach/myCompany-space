@@ -1,4 +1,52 @@
 <div class="wrapper">
-    <div class="content"></div>
+    <div class="content centerContent flexColumn" [class.small]="showPrices" (click)="showPrices = !showPrices">
+        <div class="credo">{{locale.langPack['credo']}}</div>
+        <div class="points">
+            <div class="point">
+                <div class="circle"></div>
+                <div class="name" [style.opacity]="!showPrices? '1': '0'">{{locale.langPack['buildpoint']}}</div>
+            </div>
+            <div class="point">
+                <div class="circle"></div>
+                <div class="name" [style.opacity]="!showPrices? '1': '0'">{{locale.langPack['developpoint']}}</div>
+            </div>
+            <div class="point">
+                <div class="circle"></div>
+                <div class="name" [style.opacity]="!showPrices? '1': '0'">{{locale.langPack['publishpoint']}}</div>
+            </div>
+            <div class="point">
+                <div class="circle"></div>
+                <div class="name" [style.opacity]="!showPrices? '1': '0'">{{locale.langPack['popularizationpoint']}}</div>
+            </div>
+        </div>
+        <div class="btn dark-btn" [style.opacity]="!showPrices? '1': '0'">{{locale.langPack['letsgo']}}</div>
+    </div>
+    <div class="prices" [class.small]="!showPrices">
+        <h2>{{locale.langPack['prices']}}</h2>
+        <div class="tabs">
+            <div class="tab" [class.active]="activeTab === 'design'" (click)="activeTab='design'">{{locale.langPack['design']}}</div>
+            <div class="tab" [class.active]="activeTab === 'develop'" (click)="activeTab='develop'">{{locale.langPack['develop']}}</div>
+            <div class="tab" [class.active]="activeTab === 'promoute'" (click)="activeTab='promoute'">{{locale.langPack['promouting']}}</div>
+        </div>
+        <div class="tab-content">
+            <div class="design">
+                <div>
+                    <div class="task">Build a brand design<div class="taskPrice">50$</div></div>
+                    <div class="task">Create webpage design<div class="taskPrice">50$</div></div>
+                    <div class="task">UI/UX testing consultation<div class="taskPrice">50$</div></div>
+                    <div class="task">Logo creating<div class="taskPrice">50$</div></div>
+                    <div class="task">Banner creating<div class="taskPrice">50$</div></div>
+                </div>
+                <div></div>
+            </div>
+            <div class="develop">
+
+            </div>
+            <div class="promoute">
+
+            </div>
+        </div>
+    </div>
     <div class="earth"></div>
+    <div class="author">alexandrtovmach@gmail.com</div>
 </div>
